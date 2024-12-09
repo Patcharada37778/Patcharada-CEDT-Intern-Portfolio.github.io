@@ -25,44 +25,80 @@
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Patcharada</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <script>
+		$(document).ready(function() {
+		  // Close the navbar when a link is clicked
+		  $('.navbar-nav .nav-link').on('click', function () {
+			// If the navbar is open, collapse it
+			$('#ftco-nav').collapse('hide');
+		  });
+		});
+	  </script>
+		
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+			<div class="container">
+			  <a class="navbar-brand" href="index.html">Patcharada</a>
+			  <!-- Menu Text before the hamburger icon -->
+		  
+			  <button
+				class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
+				type="button"
+				data-toggle="collapse"
+				data-target="#ftco-nav"
+				aria-controls="ftco-nav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			  >
+				<span class="oi oi-menu"></span>
+			  </button>
+		  
+			  <div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+				  <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+				  <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+				  <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Project</span></a></li>
+				  <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		  
+		  <!-- Include jQuery if not already included -->
+		  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		  
+		  <script>
+			$(document).ready(function() {
+			  // Close the navbar when a link is clicked
+			  $('.navbar-nav .nav-link').on('click', function () {
+				// If the navbar is open, collapse it
+				$('#ftco-nav').collapse('hide');
+			  });
+			});
+		  </script>
+		  
+	  
+	  
+	  
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Project</span></a></li>
-	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	      <div class="slider-item ">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          		<div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Patcharada</span></h1>
-			            <h2 class="mb-4">Aspiring Software Engineer and UX/UI Enthusiast</h2>
-			            
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-    </section>
+		<div class="container">
+		  <div class="row d-md-flex no-gutters align-items-center">
+			<div class="one-forth d-flex align-items-center text-box">
+			  <div class="text">
+				<span class="subheading">Hello!</span>
+				<h1 class="mb-4 mt-3">I'm <span>Patcharada</span></h1>
+				<h2 class="mb-4">Aspiring Software Engineer and UX/UI Enthusiast</h2>
+			  </div>
+			</div>
+			<div class="one-third img-container">
+			  <img src="images/bg_1.png" alt="Profile Image" class="img">
+			</div>
+		  </div>
+		</div>
+	  </section>		
+	  
+	  
 
 	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
 		<div class="container">
@@ -82,7 +118,7 @@
 							<p>Passionate about blending creativity with functionality, I excel in UX/UI design, frontend, and backend development, delivering award-winning projects with strong leadership and a focus on impactful user experiences.</p>
 							<ul class="about-info mt-4 px-md-0 px-2">
 								<li class="d-flex"><span>Name:</span> <span>Patcharada Tawaditap</span></li>
-								<li class="d-flex"><span>Date of birth:</span> <span>01 March 2006</span></li>
+								<li class="d-flex"><span>Date of birth:</span> <span>28 March 2006</span></li>
 								<li class="d-flex"><span>Email:</span> <span>patcharada37778@gmail.com</span></li>
 								<li class="d-flex"><span>Phone: </span> <span>0631129384</span></li>
 							</ul>
@@ -138,7 +174,7 @@
 						<!-- Video section for EiPCA -->
 						<div class="col-lg-12 col-12 mt-3">
 							<video width="100%" height="auto" controls>
-								<source src="video/EiPCA.mp4" type="video/mp4">
+								<source src="videos/EiPCA.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
 						</div>
@@ -181,7 +217,7 @@
 						<!-- Video section for TeethStory -->
 						<div class="col-lg-12 col-12 mt-3">
 							<video width="100%" height="auto" controls>
-								<source src="video/TeethStory.mp4" type="video/mp4">
+								<source src="videos/TeethStory.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
 						</div>
@@ -219,7 +255,7 @@
 						<!-- Video section for Homo sapiens -->
 						<div class="col-lg-12 col-12 mt-3">
 							<video width="100%" height="auto" controls>
-								<source src="video/Homo sapiens.mp4" type="video/mp4">
+								<source src="videos/Homo sapiens.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
 						</div>
@@ -257,7 +293,7 @@
 						<!-- Video section for HealthCard -->
 						<div class="col-lg-12 col-12 mt-3">
 							<video width="100%" height="auto" controls>
-								<source src="video/HealthCard.mp4" type="video/mp4">
+								<source src="videos/HealthCard.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
 						</div>
@@ -287,7 +323,7 @@
 						<!-- Video section for HealthCard -->
 						<div class="col-lg-12 col-12 mt-3">
 							<video width="100%" height="auto" controls>
-								<source src="video/O-RA.mp4" type="video/mp4">
+								<source src="videos/O-RA.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
 						</div>
@@ -317,7 +353,7 @@
 						<!-- Video section for First Appoint -->
 						<div class="col-lg-12 col-12 mt-3">
 							<video width="100%" height="auto" controls>
-								<source src="video/fa.mp4" type="video/mp4">
+								<source src="videos/fa.mp4" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>
 						</div>
@@ -528,7 +564,9 @@
 			</div>
 		</div>
 	</section>
-	
+
+<p class="center-text">This is my first time developing a website, and it took 8 hours to create.</p>
+
 
   
 
