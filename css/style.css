@@ -9800,7 +9800,23 @@ body {
     padding-bottom: 60px; /* Adds space at the bottom */
   }
    
+    .resume-btn {
+    display: inline-block;
+    padding: 12px 15px; /* Adjust size to match social buttons */
+    font-size: 16px; /* Match text size */
+    font-weight: bold;
+    color: white;
+    background-color: var(--green); /* Use LinkedIn blue as a base color */
+    border: none;
+    border-radius: 50px; /* Match the rounded style of social buttons */
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
   
+  .resume-btn:hover {
+    background-color: orange; /* Slightly darker blue for hover */
+  }
   
 
 @-webkit-keyframes loader-rotate {
