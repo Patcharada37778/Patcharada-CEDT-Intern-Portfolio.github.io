@@ -269,7 +269,35 @@
     fixedContentPos: false
   });
 
+/* UX/UI */
+// Get the modal and elements
+const modal = document.getElementById("popup-modal");
+const popupImg = document.getElementById("popup-img");
+const closeBtn = document.getElementById("close-popup");
 
+// Get all the work cards
+const workCards = document.querySelectorAll(".work-card");
+
+// Open popup when a card is clicked
+workCards.forEach(card => {
+  card.addEventListener("click", function() {
+    modal.style.display = "flex";  // Show the modal
+    const img = this.querySelector(".work-thumbnail"); // Get the image inside the clicked card
+    popupImg.src = img.src;      // Set the source of the popup image to the clicked image
+  });
+});
+
+// Close popup when the close button is clicked
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";   // Hide the modal
+});
+
+// Close popup if user clicks outside of the image
+modal.addEventListener("click", function(e) {
+  if (e.target === modal) {
+    modal.style.display = "none";  // Hide the modal if clicked outside the image
+  }
+});
 
 
 
